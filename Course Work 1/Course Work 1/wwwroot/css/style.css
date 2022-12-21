@@ -1,0 +1,59 @@
+﻿.body_background {
+    background-color: azure;
+}
+
+.head_of_site {
+    display: flex;
+}
+
+.head_of_site_title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    background-color: antiquewhite;
+}
+
+.head_of_site_blocks {
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.head_of_site_blocks_link {
+    text-align: center;
+    font-size: 24px;
+}
+
+.body_of_main_page {
+    display: grid;
+    grid-template-columns: 0.4fr 1.5fr 0.4fr;
+}
+
+.body_of_site_text {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.body_of_table_blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.search_in_table_page {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.statictic_img_box{
+    text-align:center;
+}
+
+.statictic_img_box_place{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}

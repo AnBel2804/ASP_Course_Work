@@ -1,0 +1,49 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<Course_Work_1.Models.MainTableResult>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Таблица</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body class="body_background">
+    <div class="haed_of_site">
+        <div class="head_of_site_title"> Реестр автромобилей в Украине </div>
+        <div class="head_of_site_blocks">
+            <div></div>
+            <div class="head_of_site_blocks_link">
+                <a href="/Home/Index">Главная страница</a>
+            </div>
+            <div></div>
+            <div class="head_of_site_blocks_link">
+                <a href="/Home/Statistic">Статистика</a>
+            </div>
+            <div></div>
+        </div>
+    </div>
+    <div class="search_in_table_page">
+        @using (Html.BeginForm())
+        {
+            <p>
+                Find by name: @Html.TextBox("SearchString")
+                <input type="submit" value="Search" />
+            </p>
+        }
+    </div>
+    <div class="body_of_table_blocks">
+        <div><a asp-action="Table" asp-route-sortOrder="@ViewBag.ManufacturerSort">Производитель</a></div>
+        <div><a asp-action="Table" asp-route-sortOrder="@ViewBag.ModelSort">Модель</a></div>
+        <div><a asp-action="Table" asp-route-sortOrder="@ViewBag.RegistrationSort">Номер</a></div>
+        @foreach (var item in Model)
+        {
+            <div>@item.Manufacturer</div><div>@item.Model</div><div>@item.NumberOfCar</div>
+        }
+    </div>
+</body>
+</html>
